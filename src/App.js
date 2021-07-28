@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideBar from './SideBar';
 import Chat from './Chat';
@@ -12,10 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="app__body">
-        {!user ? (
+      {!user ? (
           <Login />
-        ):(
+      ):(
+      <div className="app__body">
         <Router>
           <SideBar/>
           <Switch>
@@ -23,10 +23,8 @@ function App() {
             <Route path="/" exact><Chat /></Route>
           </Switch>
         </Router>
+        </div>
         )}
-        
-        
-      </div>
     </div>
   );
 }

@@ -5,6 +5,14 @@
     
 }
 
+.chat__roomName {
+    margin: 0;
+}
+
+.chat__roomLastSeen {
+    margin: 0;
+}
+
 .chat__header {
     padding: 20px;
     display: flex;
